@@ -23,8 +23,8 @@ namespace src.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet("getWeather")]
+        public IEnumerable<WeatherForecast> getWeather()
         {
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -34,6 +34,11 @@ namespace src.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        [HttpGet("testme")]
+        public string testme()
+        {
+            return "Version 1";
         }
     }
 }
