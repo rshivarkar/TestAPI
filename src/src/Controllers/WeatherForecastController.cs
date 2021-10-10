@@ -38,7 +38,7 @@ namespace src.Controllers
         [HttpGet("testme")]
         public string testme()
         {
-            return "Version 1";
+            return "Version 2";
         }
     }
 }
